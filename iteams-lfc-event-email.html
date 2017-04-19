@@ -109,7 +109,7 @@
 	@tip Set the background color and top border for your email. You may want to choose colors that match your company's branding.
 	*/
 		#bodyCell{
-			/*@editable*/border-top:5px solid #00aeef;
+			/*@editable*/border-top:5px solid #e66316;
 		}
 	/*
 	@tab Page
@@ -186,10 +186,10 @@
 			/*@editable*/border-bottom:0;
 		}
 		.prePreheader{
-			background-color:#00aeef;
+			background-color:#e66316;
 			color:#7edcff;
 			margin-bottom:20px;
-			border-bottom:5px solid #00aeef;
+			border-bottom:5px solid #e66316;
 			font-size:70%;
 			font-family:'Lato', 'Montserrat', sans-serif;
 		}
@@ -347,7 +347,7 @@
 		}
 
 }	@media only screen and (max-width: 580px){
-		img[class=mcnImage],table[class=mcnShareContent],table[class=mcnCaptionTopContent],table[class=mcnCaptionBottomContent],table[class=mcnTextContentContainer],table[class=mcnBoxedTextContentContainer],table[class=mcnImageGroupContentContainer],table[class=mcnCaptionLeftTextContentContainer],table[class=mcnCaptionRightTextContentContainer],table[class=mcnCaptionLeftImageContentContainer],table[class=mcnCaptionRightImageContentContainer],table[class=mcnImageCardLeftTextContentContainer],table[class=mcnImageCardRightTextContentContainer]{
+		img[class=mcnImage],img[id=banner],table[class=mcnShareContent],table[class=mcnCaptionTopContent],table[class=mcnCaptionBottomContent],table[class=mcnTextContentContainer],table[class=mcnBoxedTextContentContainer],table[class=mcnImageGroupContentContainer],table[class=mcnCaptionLeftTextContentContainer],table[class=mcnCaptionRightTextContentContainer],table[class=mcnCaptionLeftImageContentContainer],table[class=mcnCaptionRightImageContentContainer],table[class=mcnImageCardLeftTextContentContainer],table[class=mcnImageCardRightTextContentContainer]{
 			width:100% !important;
 		}
 
@@ -384,7 +384,7 @@
 		}
 
 }	@media only screen and (max-width: 580px){
-		td[class=mcnTextContent],td[class=mcnBoxedTextContentColumn]{
+		td[class=mcnTextContent],td[class=mcnBoxedTextContentColumn],div[class=text-container]{
 			padding-right:18px !important;
 			padding-left:18px !important;
 		}
@@ -490,7 +490,11 @@
 	*/
 		table[id=templatePreheader]{
 			/*@editable*/display:table !important;
-			margin-top:20px;
+			margin-top:0px;
+		}
+		table[id=templatePreheader] table[class=templateContainer] td[class=preheaderContainer]{
+			/*@editable*/display:table !important;
+			padding:0px !important;
 		}
 
 }	@media only screen and (max-width: 580px){
@@ -516,7 +520,7 @@
 	@tip Make the header text larger in size for better readability on small screens.
 	*/
 		table[class=mcnImageContentContainer]{
-			/*@editable*/width:90% !important;
+			/*@editable*/width:100% !important;
 			text-align:center;
 			margin:0 auto;
 		}
@@ -583,7 +587,7 @@
                     							<tbody>
                     							<tr>
                         							<td>
-                            							<span mc:edit="emailsubjectgrabber">Place something here to grab attention.</span>
+                            							<span mc:edit="emailsubjectgrabber">Laugh... for a change!</span>
                         							</td>
                         							<td width="30">&nbsp;
                         							</td>
@@ -645,16 +649,14 @@
                   
                 	          
                   <table style="width: 100%;" width="100%">
-                  <tr><td style="text-align: left; width: 50%;" width="50%">
-                	<h1 style="color: #12646d !important;" mc:edit="newslettername">YOUR NEWSLETTER NAME</h1>
-                	</td>
-                  <td style="position: relative; text-align: right; width: 50%;" width="50%">
-                  <a href="http://iteams.us" style="border: 0; text-decoration:none;">
+                  <tr>
+                  <td style="text-align: right; width: 100%;" width="100%">
+                  <a href="http://iteams.gesture.com" style="border: 0; text-decoration:none;">
                   <!--[if mso]>
-                  	<table width="50%"><tr><td><img width="200" src="https://gallery.mailchimp.com/c2ce47add15fcafd7072b3dd2/images/d8ac365e-7397-4bb1-ba7f-a1cacdd78cfd.png" alt="ITEAMS" style="text-align: right; width: 207px; border: 0; text-decoration:none; vertical-align: baseline;"></td></tr></table>
+                  	<table width="100%"><tr><td><img width="600" src="images/LFC-event-banner-email2.png" alt="Laugh... for a change!" style="text-align: right; width: 600px; border: 0; text-decoration:none; vertical-align: baseline;"></td></tr></table>
                     <div style="display:none">
                   <![endif]-->
-                  <img id="ITeamsLogo" src="https://gallery.mailchimp.com/c2ce47add15fcafd7072b3dd2/images/d8ac365e-7397-4bb1-ba7f-a1cacdd78cfd.png" alt="ITEAMS" style="text-align: right; min-width: 50px; max-width: 207px; border: 0; text-decoration:none; vertical-align: baseline;">
+                  <img id="banner" src="images/LFC-event-banner-email2.png" alt="Laugh... for a change!" style="text-align: right; width: 100%; max-width: 600px; border: 0; text-decoration:none; vertical-align: baseline;" />
               <!--[if mso]>
                   	</div>
                   <![endif]-->
@@ -702,13 +704,9 @@
             <td valign="top" class="mcnTextBlockInner" width="100%">
 
 
-<div class="text-container" mc:hideable style="padding: 20px 20px 20px 20px; max-width: 600px;">
- 		<h2 mc:edit="highlighttextcontainer" style="color: #cbe19b !important; text-align: left !important; font-style: italic; font-weight: normal;">
- 		This is an optional focus block for text, embedded video, or images. Just hover over it an hide it if you don't want to use it.</h2>
-</div>
-    
-<div class="video-container" mc:hideable style="max-width: 600px; margin: 0 auto;">    
-                <img mc:edit="highlightvideocontainer" src="https://gallery.mailchimp.com/c2ce47add15fcafd7072b3dd2/images/ebf68adb-7d97-4dfa-b4b9-9fbf2d27ad4e.jpg" style="width: 100%;">
+<div class="text-container" mc:hideable style="max-width: 600px;">
+ 		<h2 mc:edit="highlighttextcontainer" style="color: #e66316 !important; text-align: left !important; font-style: italic; font-weight: bold;">
+ 		Optional focus message to grab attention. Just hover over it an hide it if you don't want to use it.</h2>
 </div>
 
             </td>
@@ -751,13 +749,13 @@
                     <tbody>
                     <tr>
                         
-                        <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 0px; padding-bottom: 32px; padding-left: 0px; border-bottom: 2px solid #dadada; font-family:'Lato', 'Montserrat', sans-serif; font-weight:400;" mc:edit="maincontent">
+                        <td valign="top" class="mcnTextContent" style="padding-top:9px; padding-right: 0px; padding-bottom: 32px; padding-left: 0px; font-family:'Lato', 'Montserrat', sans-serif; font-weight:400;" mc:edit="maincontent">
                         
                           
 
 
 
-Your main content goes here. (If you "hide" the two blocks above in your Mailchimp campaign, this content will appear immediately below the newsletter name and ITeams logo.)
+Your main content goes here. (If you "hide" the optional block above, this content will appear immediately below the banner image.) <br><br><strong>Please Note</strong> - If you're pasting content from Google Docs or MS Word you'll want to select the entire text and click the "Clear Styles" button in Mailchimp to avoid unusual text issues in different email clients.
 
 
 
@@ -765,6 +763,14 @@ Your main content goes here. (If you "hide" the two blocks above in your Mailchi
 
 
 
+                    </td>
+                    </tr>
+                    <tr>
+                    	<td style="border-top: 2px solid #dadada; ">&nbsp;</td>
+                    </tr>
+                    <tr>
+                    <td style="margin: 0; padding: 30px 20px 20px; width: 100%; text-align: center;" width="100%">
+                    	<a href="http://iteams.gesture.com" style="color: #fefefe; text-decoration: none;"><div style="position: relative; display: inline-block; padding: 3px 15px; background: #ee7023; color: #fefefe !important; text-align: center; margin: 0 auto; border-radius: 4px;"><h3 style="color: #fefefe !important;"><strong>VISIT THE EVENT SITE</strong></h3></div></a>
                     </td>
                     </tr>
                 </tbody>
