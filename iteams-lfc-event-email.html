@@ -95,6 +95,21 @@
 			width:100%;
 			height:100%;
 		}
+		.mcnTextBlock h2, .mcnTextContent{
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+		}
+		table.mcdDividerContent {
+			width: 100%;
+		}
+		.mcnDividerContent td .left-side {
+			padding-left: 20px !important;
+			text-align: left;
+		}
+		.mcnDividerContent td .right-side {
+			padding-right: 20px !important;
+			text-align: right;
+		}
 	/*
 	@tab Page
 	@section background style
@@ -384,7 +399,7 @@
 		}
 
 }	@media only screen and (max-width: 580px){
-		td[class=mcnTextContent],td[class=mcnBoxedTextContentColumn],div[class=text-container]{
+		td[class=mcnTextContent],td[class=mcnBoxedTextContentColumn]{
 			padding-right:18px !important;
 			padding-left:18px !important;
 		}
@@ -494,7 +509,7 @@
 		}
 		table[id=templatePreheader] table[class=templateContainer] td[class=preheaderContainer]{
 			/*@editable*/display:table !important;
-			padding:0px !important;
+			padding:10px !important;
 		}
 
 }	@media only screen and (max-width: 580px){
@@ -541,6 +556,19 @@
 			/*@editable*/font-size:18px !important;
 			/*@editable*/line-height:27px !important;
 		}
+		.mcnTextBlock h2{
+			padding-left: 18px !important;
+			padding-right: 18px !important;
+		}
+		table.mcdDividerContent {
+			width: 100%;
+		}
+		.mcnDividerContent td .left-side {
+			padding-left: 10px !important;
+		}
+		.mcnDividerContent td .right-side {
+			padding-right: 10px !important;
+		}
 
 }	@media only screen and (max-width: 580px){
 	/*
@@ -583,16 +611,15 @@
     						    <tbody class="mcnDividerBlockOuter">
         							<tr>
             							<td class="mcnDividerBlockInner" style="">
-                							<table class="mcnDividerContent" border="0" align="center" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
+                							<table class="mcnDividerContent" border="0" align="center" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; max-width: 600px;">
                     							<tbody>
-                    							<tr>
-                        							<td>
-                            							<span mc:edit="emailsubjectgrabber">Laugh... for a change!</span>
+                    							<tr style="width:100%">
+                        							<td style="width:50%">
+                            							<span class="left-side" mc:edit="emailsubjectgrabber">Laugh... for a change!</span>
                         							</td>
-                        							<td width="30">&nbsp;
-                        							</td>
-                        							<td>
-                            							<span mc:edit="viewonweb" style="text-align: right;">Doesn't look right? <a href="*|ARCHIVE|*" style="color: #ace6fb;">View on web</a></span>
+                        							
+                        							<td style="width:50%; text-align: right;">
+                            							<span class="right-side" mc:edit="viewonweb" style="text-align: right !important;">Doesn't look right? <a href="*|ARCHIVE|*" style="color: #ace6fb;">View on web</a></span>
                         							</td>
                     							</tr>
                 								</tbody>
